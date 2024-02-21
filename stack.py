@@ -51,3 +51,8 @@ class Stack:
         if index == 0:
             # If index is 0, simply push the new element onto the stack
             self.push(data)
+        else:
+            # Traverse the stack to find the node at the index before the desired position
+            current_node = self.top_node
+            for _ in range(index - 1):
+                current_node = current_node.next
