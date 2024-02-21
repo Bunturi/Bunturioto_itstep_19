@@ -32,3 +32,14 @@ class Stack:
         new_node.next = self.top_node
         self.top_node = new_node
         self.length += 1
+
+    def pop(self):
+        # Remove and return the data of the top node
+        if not self.empty():
+            popped_item = self.top_node.data
+            self.top_node = self.top_node.next
+            self.length -= 1
+            return popped_item
+        else:
+            raise IndexError("stack is empty")
+
