@@ -26,3 +26,11 @@ class Linklist:
 
         # Point the last node's next to the new node
         last_node.next = new_node
+
+    def display_info(self):
+        # Displaying the elements of the linked list
+        current_node = self.head
+        while current_node is not None:
+            print(current_node.data, end=" -> ")
+            current_node = current_node.next
+        print()
