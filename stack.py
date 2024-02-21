@@ -14,3 +14,10 @@ class Stack:
     def empty(self):
         # Check if the stack is empty
         return self.length == 0
+
+    def top(self):
+        # Return the data of the top node without removing it
+        if not self.empty():
+            return self.top_node.data
+        else:
+            raise IndexError("stack is empty")
