@@ -63,3 +63,6 @@ class Stack:
             # Adjust pointers to insert the new node at the specified index
             new_node.next = current_node.next
             current_node.next = new_node
+
+            # resize the length of the stack
+            self.length += 1
