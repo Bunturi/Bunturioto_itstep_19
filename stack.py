@@ -25,3 +25,10 @@ class Stack:
     def size(self):
         # Return the size of the stack
         return self.length
+
+    def push(self, data):
+        # Push a new node with data onto the stack
+        new_node = Node(data)
+        new_node.next = self.top_node
+        self.top_node = new_node
+        self.length += 1
