@@ -47,3 +47,7 @@ class Stack:
         # Insert a new element at the specified index
         if index < 0 or index > self.length:
             raise IndexError("index out of range")
+
+        if index == 0:
+            # If index is 0, simply push the new element onto the stack
+            self.push(data)
