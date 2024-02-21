@@ -18,3 +18,11 @@ class Linklist:
             # If the list is empty, make the new node the head
             self.head = new_node
             return
+
+        # Traverse the list to find the last node
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+
+        # Point the last node's next to the new node
+        last_node.next = new_node
