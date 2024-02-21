@@ -75,3 +75,28 @@ class Linklist:
         # If the node with data is found, remove it
         if current_node.next:
             current_node.next = current_node.next.next
+
+
+# Test cases
+link_list = Linklist()
+link_list.append(["oto"])
+link_list.append(2)
+link_list.append(3)
+link_list.append(4)
+link_list.append(5)
+link_list.append("irakli")
+
+# Display the original linked list
+link_list.display_info()
+
+# Insert "irakli" at index 2
+link_list.insert("irakli", 2)
+link_list.display_info()
+
+# Remove the first occurrence of "irakli"
+link_list.remove("irakli")
+link_list.display_info()
+
+# Remove the second occurrence of "irakli" (which doesn't exist)
+link_list.remove("irakli")
+link_list.display_info()
