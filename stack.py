@@ -21,3 +21,7 @@ class Stack:
             return self.top_node.data
         else:
             raise IndexError("stack is empty")
+
+    def size(self):
+        # Return the size of the stack
+        return self.length
