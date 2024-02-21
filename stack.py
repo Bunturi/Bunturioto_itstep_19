@@ -66,3 +66,16 @@ class Stack:
 
             # resize the length of the stack
             self.length += 1
+
+
+# Test the stack
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.push(4)
+
+print(stack.size())  # Print the size of the stack before insert
+stack.insert(5, 2)  # Insert 5 at index 2
+print(stack.size())  # Print the size of the stack
+print(stack.top())
