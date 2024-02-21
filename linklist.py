@@ -34,3 +34,24 @@ class Linklist:
             print(current_node.data, end=" -> ")
             current_node = current_node.next
         print()
+
+    def insert(self, data, index):
+        # Inserting a new node at a specified index
+        new_node = Node(data)
+
+        if index == 0:
+            # If index is 0, insert at the beginning
+            new_node.next = self.head
+            self.head = new_node
+            return
+
+        # Traverse to the node at the index before the desired position
+        current_node = self.head
+        current_index = 0
+        while current_node.next and current_index < index - 1:
+            current_node = current_node.next
+            current_index += 1
+
+        # Insert the new node at the specified index
+        new_node.next = current_node.next
+        current_node.next = new_node
