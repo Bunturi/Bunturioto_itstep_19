@@ -56,3 +56,10 @@ class Stack:
             current_node = self.top_node
             for _ in range(index - 1):
                 current_node = current_node.next
+
+            # Create a new node with the data
+            new_node = Node(data)
+
+            # Adjust pointers to insert the new node at the specified index
+            new_node.next = current_node.next
+            current_node.next = new_node
