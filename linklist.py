@@ -55,3 +55,23 @@ class Linklist:
         # Insert the new node at the specified index
         new_node.next = current_node.next
         current_node.next = new_node
+
+    def remove(self, data):
+        # Removing a node with a specified data value
+        if self.head is None:
+            # If the list is empty, return
+            return
+
+        if self.head.data == data:
+            # If the data is in the head node, remove the head
+            self.head = self.head.next
+            return
+
+        # Traverse the list to find the node before the node to be removed
+        current_node = self.head
+        while current_node.next and current_node.next.data != data:
+            current_node = current_node.next
+
+        # If the node with data is found, remove it
+        if current_node.next:
+            current_node.next = current_node.next.next
