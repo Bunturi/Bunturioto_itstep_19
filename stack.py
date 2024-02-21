@@ -43,3 +43,7 @@ class Stack:
         else:
             raise IndexError("stack is empty")
 
+    def insert(self, data, index):
+        # Insert a new element at the specified index
+        if index < 0 or index > self.length:
+            raise IndexError("index out of range")
